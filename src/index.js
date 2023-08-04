@@ -1,17 +1,26 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDOM from 'react-dom';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+function randomTextGenerator() {
+	return 'Random Text';
+}
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const App = () => {
+	const randomText = 'Random';
+
+	const randomText2 = ['Random', 'Text', 'Generator'];
+
+	const randomText3 = { text: 'damn' };
+
+	return (
+		<div>
+			<h1 style={{ fontFamily: 'cursive' }}>Hi, there!</h1>
+			<h1>{randomText}</h1>
+			<p>{randomTextGenerator()}</p>
+			<p>{randomText2}</p>
+			<p>{randomText3.text}</p>
+		</div>
+	);
+};
+
+ReactDOM.render(<App />, document.querySelector('#root'));
